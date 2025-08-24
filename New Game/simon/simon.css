@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.score {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.red    { background: #f44336; }
+.green  { background: #4caf50; }
+.blue   { background: #2196f3; }
+.yellow { background: #ffeb3b; }
+
+.btn:active, .pressed {
+  transform: scale(0.95);
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px white;
+}
+
+@media (max-width: 600px) {
+  .btn-container {
+    grid-template-columns: repeat(2, 120px);
+    gap: 15px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 120px;
+  }
+}
